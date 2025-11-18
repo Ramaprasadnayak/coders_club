@@ -1,0 +1,33 @@
+/* input box */
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 320px;
+    height: 60px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+/* inside input box (child) */
+.input >input {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+}
+
+/* child icon of input */
+.icon {
+    margin: 10px;
+}
+
+/* eye buttonn */
+.eye {
+    cursor: pointer;
+    margin: 0;
+    margin-right: 15px;
+}
