@@ -1,0 +1,102 @@
+.top-strip {
+  background-color: #0d04b9;  
+  color: white;               
+  text-align: center;
+  font-size: 14px;
+  padding: 6px 0;           
+  margin-top: 10px; 
+  font-family: Arial, sans-serif;
+}
+
+.top-strip b {
+  font-weight: bold;
+}
+
+.mylogo{
+  margin-left: -25px;
+  margin-top: -69px;
+  width: 240px;
+  height: 220px;       
+}
+
+.header-main{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.location{
+  margin-top: 20px;
+}
+
+.searchbar{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 600px;
+}
+.searchoption:hover{
+  box-shadow: -1px -1px 11px #eb00ff,
+              1px 1px 11px #00f0ff;  
+  outline: none;
+  animation: glow 1s infinite;
+}
+
+@keyframes glow {
+  0%{
+      box-shadow: -1px -1px 5px #00f0ff,
+              1px 1px 5px #eb00ff;  
+  }
+  100%{
+    box-shadow:-1px -1px 5px #eb00ff,
+              1px 1px 5px #00f0ff;
+  }
+}
+
+.loginbutton {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100px;  
+  height: 38px;       
+  font-size: 16px;   
+  border-radius: 50px; 
+  transition: all 0.3s ease;
+  background-color: #1a1a1a;
+  border:none
+}
+
+.loginbutton:hover {
+  box-shadow: -5px -5px 20px #eb00ff,
+              5px 5px 20px #00f0ff;
+  color: white;    
+  background-color: #1a1a1a;
+}
+.line{
+  margin-top: -5px;
+  background-color: rgb(81, 81, 87);  
+}
+
+.cartbutton{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100px;  
+  height: 38px;  
+  border-radius: 30px;
+  background:linear-gradient(135deg, #242424, #1a1a1a);
+  border: none; 
+  transition: all 0.3s ease-in-out;
+}
+
+.cartbutton:hover{  
+  box-shadow: -5px -5px 20px #eb00ff,
+              5px 5px 20px #00f0ff;
+}
+
+.header-container {
+  position: relative;
+  z-index: 9;
+}
+
+.header-container .dropdown-menu {
+  position: absolute !important;
+  z-index: 999999 !important;
+}
+

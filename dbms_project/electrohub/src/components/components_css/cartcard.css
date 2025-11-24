@@ -1,0 +1,97 @@
+.mycartpage{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.cartcard {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: 90%;
+  margin-right: 20px;
+  background-color: #191a1a82;
+  justify-content: space-between;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.type,.qty{
+    font-size: 15px;
+    color: rgb(255, 255, 255) !important;
+}
+
+.deleteicon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.deleteicon:hover {
+  transform: scale(1.2);
+  color: darkred;
+}
+
+.cartcard:hover{
+    transform: scale(1.03);
+    box-shadow: 1px 1px 20px rgba(0, 255, 255, 0.6);
+    opacity: 1;
+    background-color: #262626e2;
+}
+
+.cartcard> img{
+    justify-content: start;
+    margin:30px;
+    width: 210px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.details>h3{
+    margin-top: 30px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.review{
+    color:white
+}
+.details>p{
+    font-size: 15px;
+    color:green;
+}
+
+.details{
+      flex: 1;
+}
+
+.total_amount{
+    position: sticky;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111; 
+    color: white
+}
+
+.empty_cart{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    color: aliceblue;
+}
+
+.total_amount> Button{
+    background: rgb(235, 184, 17);
+    color: black;
+    border-radius: 50px;
+    border:none;
+}
+
+.total_amount> Button:hover,.total_amount> Button:active{
+    color: black;
+    background-color: rgb(183, 147, 29);
+}
