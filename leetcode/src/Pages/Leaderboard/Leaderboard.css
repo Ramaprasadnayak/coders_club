@@ -1,0 +1,107 @@
+.leaderboard-container {
+    min-height: calc(100vh - 64px);
+    /* background: var(--bg-color); */
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.leaderboard-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.leaderboard-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-main);
+}
+
+.rankings-list {
+    background: var(--surface-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.rank-header {
+    display: flex;
+    padding: 1rem 2rem;
+    background: rgba(15, 23, 42, 0.5);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.rank-row {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    border-top: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.rank-row:hover {
+    background: var(--surface-hover);
+}
+
+.col-rank {
+    flex: 0 0 80px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.col-user {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.col-solved {
+    flex: 0 0 150px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.col-score {
+    flex: 0 0 100px;
+    text-align: right;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 700;
+}
+
+/* Trophy colors for top 3 */
+.rank-1 .col-rank {
+    color: #f59e0b;
+}
+
+/* Gold */
+.rank-2 .col-rank {
+    color: #94a3b8;
+}
+
+/* Silver */
+.rank-3 .col-rank {
+    color: #b45309;
+}
+
+/* Bronze */

@@ -1,0 +1,118 @@
+.page-container {
+    min-height: calc(100vh - 64px);
+    /* background-color: var(--bg-color); Removed to show body pattern */
+    padding: 2rem;
+    color: var(--text-main);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, var(--text-main), var(--text-muted));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-header p {
+    color: var(--text-muted);
+}
+
+.problem-table-container {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.problem-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.problem-table th {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.problem-table td {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.problem-row:hover {
+    background: var(--surface-hover);
+}
+
+.problem-row:last-child td {
+    border-bottom: none;
+}
+
+.problem-title {
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.problem-title:hover {
+    color: var(--primary-color);
+}
+
+.difficulty-col {
+    font-weight: 600;
+}
+
+.text-green-400 {
+    color: #4ade80;
+}
+
+.text-yellow-400 {
+    color: #facc15;
+}
+
+.text-red-400 {
+    color: #f87171;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.solve-btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.solve-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.status-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+}

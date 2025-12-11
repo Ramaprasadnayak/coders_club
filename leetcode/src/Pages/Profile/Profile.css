@@ -1,0 +1,62 @@
+.profile-container {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: var(--bg-color); */
+}
+
+/* Reusing generic placeholder styles but defining them here to be self-contained or importing from a shared css could be better, 
+   but for now duplicating the key placeholder styles for isolation */
+
+.placeholder-content {
+    text-align: center;
+    background: var(--surface-color);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.icon-wrapper {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.placeholder-content h1 {
+    color: var(--text-main);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder-content p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

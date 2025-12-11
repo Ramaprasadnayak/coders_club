@@ -1,17 +1,152 @@
 /* entire login page */
-.loginpage{
+.loginpage {
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    min-height: 100vh;       
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
     width: 100%;
+}
+
+/* pre defined background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* login box which contain inputs */
+.loginbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 450px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    z-index: 10;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: fadeUp 0.6s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* heading cover signup or login */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* heading signup or loign */
+.header>p {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* list of input boxes */
+.input-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* forgot password */
+.forgot_password {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.forgot_password span {
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+.forgot_password span:hover {
+    text-decoration: underline;
+}
+
+/* submit buttons */
+.submit {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.submit_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px var(--primary-glow);
+    min-width: 120px;
+}
+
+.submit_button:hover {
+    background: #2563eb;
+    box-shadow: 0 0 20px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+/* toggle color */
+.toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    box-shadow: none;
+}
+
+.toggle:hover {
+    background: var(--surface-hover);
+    color: var(--text-main);
+    border-color: var(--text-main);
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 
 /* pre defined background */
 .background {
-    position:fixed;
-    top:0;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -36,7 +171,8 @@
 }
 
 /* when input is written or when a mouse hovers on it the login box glows */
-.loginbox:focus-within,.loginbox:hover{
+.loginbox:focus-within,
+.loginbox:hover {
     box-shadow: 0px 0px 25px rgba(227, 228, 237, 0.37);
 }
 

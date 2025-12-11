@@ -2,7 +2,6 @@ import "./Pages_css/login_signup.css";
 import { useState } from "react";
 import { MdPerson, MdEmail, MdLock } from "react-icons/md";
 import MyTextField from "../components/my_textfield";
-import MyBackground from '../components/background'
 
 function Loginpage() {
     const [action, setAction] = useState("SignUp");
@@ -22,10 +21,6 @@ function Loginpage() {
 
     return (
         <div className="loginpage">
-            {/* background */}
-            <div className="background">
-                <MyBackground count="60" />
-            </div>
 
             <div className="loginbox">
 
@@ -52,7 +47,7 @@ function Loginpage() {
                             hinttext="Email"
                             visibility={false}
                             value={loginEmail}
-                            onChange={setLoginEmail}/>
+                            onChange={setLoginEmail} />
                         {/* password entry */}
                         <MyTextField
                             key="login_pass"
@@ -63,7 +58,7 @@ function Loginpage() {
                             hinttext="Password"
                             visibility={true}
                             value={loginPassword}
-                            onChange={setLoginPassword}/>
+                            onChange={setLoginPassword} />
                     </div>
                 ) : (
                     // signUp toggle
@@ -78,7 +73,7 @@ function Loginpage() {
                             hinttext="Username"
                             visibility={false}
                             value={signupUsername}
-                            onChange={setSignupUsername}/>
+                            onChange={setSignupUsername} />
                         {/* email entry */}
                         <MyTextField
                             key="signup_email"
@@ -89,7 +84,7 @@ function Loginpage() {
                             hinttext="Email"
                             visibility={false}
                             value={signupEmail}
-                            onChange={setSignupEmail}/>
+                            onChange={setSignupEmail} />
                         {/* password  entry */}
                         <MyTextField
                             key="signup_pass"
@@ -100,7 +95,7 @@ function Loginpage() {
                             hinttext="Password"
                             visibility={true}
                             value={signupPassword}
-                            onChange={setSignupPassword}/>
+                            onChange={setSignupPassword} />
                     </div>
                 )}
 
