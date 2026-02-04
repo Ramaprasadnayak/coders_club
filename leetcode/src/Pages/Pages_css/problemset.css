@@ -1,0 +1,35 @@
+.topics {
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    background: #1F2937;
+    color: #38BDF8;
+    font-weight: 700;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    border-radius: 50px;
+}
+.submit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+.topics:hover {
+    background-color: #161d27;
+    cursor: pointer;
+}
+
+.glow {
+    background: #3A2F1C;
+    color: #F5D58D;
+}
+
+.glow:hover {
+    background: #372d1b;
+}

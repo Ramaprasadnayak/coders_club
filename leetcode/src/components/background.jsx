@@ -1,9 +1,7 @@
 import { useMemo } from 'react';
 import "./component_css/background.css"
 
-export default function MyBackground(props) {
-    const { count } = props;
-
+export default function MyBackground({count=50,color="#04101a"}) {
     const comp = [
         { icon: "}", color: "rgb(245, 184, 0)" },
         { icon: ">", color: "rgba(245, 0, 221, 1)" },
@@ -26,11 +24,8 @@ export default function MyBackground(props) {
         }));
     }, [count]);
 
-
-
-
     return (
-        <div className="rain-container">
+        <div className="background-container" style={{backgroundColor:color}}>
             {drops.map((d, i) => (
                 <div key={i} className="drop" style={{ color: d.comp.color, left: d.left, animationDelay: d.delay, animationDuration: d.duration }}>{d.comp.icon}</div>
             ))}

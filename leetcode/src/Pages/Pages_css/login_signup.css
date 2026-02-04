@@ -131,3 +131,13 @@
     background: #bdbdbd;
     color: #000000;
 }
+
+
+@media (max-width:768px) {
+    @media (max-width: 768px) {
+    .loginbox {
+        transform: scale(0.85);
+        transform-origin: center;
+    }
+    }
+}

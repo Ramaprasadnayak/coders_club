@@ -1,0 +1,26 @@
+.problempage-statement{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.statements{
+    display: flex; 
+    flex-direction: row;
+    gap: 10px;
+}
+.statement-topic,.statement-difficulty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d232c;
+    width: 50px;
+    border-radius: 30px; 
+}
+.statement-topic{
+    color:gold;
+}
+.statement-difficulty{
+    color:aqua;
+    box-sizing: border-box;
+}

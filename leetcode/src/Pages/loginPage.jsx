@@ -3,9 +3,12 @@ import { useState } from "react";
 import { MdPerson, MdEmail, MdLock } from "react-icons/md";
 import MyTextField from "../components/my_textfield";
 import MyBackground from '../components/background'
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Loginpage() {
     const [action, setAction] = useState("SignUp");
+    const navigate = useNavigate();
 
     // Login fields
     const [loginEmail, setLoginEmail] = useState("");
@@ -16,9 +19,36 @@ function Loginpage() {
     const [signupEmail, setSignupEmail] = useState("");
     const [signupPassword, setSignupPassword] = useState("");
 
-    const signINhandle = async () => { };
+    const signINhandle = async () => {
+        try {
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/users/login`, {
+                email: loginEmail,
+                password: loginPassword
+            });
+            localStorage.setItem("token",res.data.token);
+            localStorage.setItem("user",JSON.stringify(res.data.user))
+            alert("Login successful");
+            navigate("/");
+        } catch (err) {
+            alert("error occured: " + err);
+        }
+    };
 
-    const signUPhandle = async () => { };
+    const signUPhandle = async () => {
+        try {
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/users/signup`, {
+                username: signupUsername,
+                email: signupEmail,
+                password: signupPassword
+            });
+            localStorage.setItem("token",res.data.token);
+            localStorage.setItem("user",JSON.stringify(res.data.user))
+            alert("Signup successful");
+            navigate("/");
+        } catch (err) {
+            alert("error occured: " + err);
+        }
+    };
 
     return (
         <div className="loginpage">
@@ -52,7 +82,7 @@ function Loginpage() {
                             hinttext="Email"
                             visibility={false}
                             value={loginEmail}
-                            onChange={setLoginEmail}/>
+                            onChange={setLoginEmail} />
                         {/* password entry */}
                         <MyTextField
                             key="login_pass"
@@ -63,7 +93,7 @@ function Loginpage() {
                             hinttext="Password"
                             visibility={true}
                             value={loginPassword}
-                            onChange={setLoginPassword}/>
+                            onChange={setLoginPassword} />
                     </div>
                 ) : (
                     // signUp toggle
@@ -78,7 +108,7 @@ function Loginpage() {
                             hinttext="Username"
                             visibility={false}
                             value={signupUsername}
-                            onChange={setSignupUsername}/>
+                            onChange={setSignupUsername} />
                         {/* email entry */}
                         <MyTextField
                             key="signup_email"
@@ -89,7 +119,7 @@ function Loginpage() {
                             hinttext="Email"
                             visibility={false}
                             value={signupEmail}
-                            onChange={setSignupEmail}/>
+                            onChange={setSignupEmail} />
                         {/* password  entry */}
                         <MyTextField
                             key="signup_pass"
@@ -100,7 +130,7 @@ function Loginpage() {
                             hinttext="Password"
                             visibility={true}
                             value={signupPassword}
-                            onChange={setSignupPassword}/>
+                            onChange={setSignupPassword} />
                     </div>
                 )}
 

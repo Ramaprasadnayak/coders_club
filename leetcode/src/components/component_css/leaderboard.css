@@ -1,0 +1,69 @@
+.dashboard {
+  height: 270px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 30px;
+  width: 450px;
+  padding-bottom: 10px;
+  backdrop-filter: blur(5px);
+  border: 2px solid rgb(79, 22, 82);
+  margin: 20px auto;
+}
+.dashboard:focus-within,.dashboard:hover{
+  box-shadow: 0px 0px 25px rgba(244, 27, 255, 0.37);
+}
+
+.dashboard2::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:none;
+  width: 100%;
+  overflow-y: auto; 
+}
+
+.inside-boxes{
+  border-radius: 20px;
+  width: 90%;
+  height: 60px;
+  padding-left: 20px;
+  display: flex;
+  margin-top: 7px;
+  align-items: center;
+  gap:10px;
+  flex-direction: row;
+  border: 1px solid gold;
+}
+.inside-boxes:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: -2px -2px 5px gold,
+    2px 2px 5px aqua;
+}
+
+.info{
+  margin-left: 100px;
+}
+.member-name{
+  color: rgb(241, 183, 35);
+}
+.member-points{
+  color:aqua
+}
+.rank{
+  color:white;
+  font-size: 40px;
+}
+
+
+@media (max-width:768px){
+  .dashboard {
+    width: 380px;
+  }
+}

@@ -1,0 +1,15 @@
+.myeditor-nav{
+    display: flex;
+    align-items: center;
+    height: 10%;
+    background-color:  #090c12;
+    color: white;
+}
+
+.dropdown-button{
+    margin-left: 10px;
+    cursor: pointer;
+    color:white;
+    background-color: #090c12;
+    border: none;
+}

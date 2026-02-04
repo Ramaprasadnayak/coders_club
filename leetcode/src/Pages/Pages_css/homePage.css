@@ -14,42 +14,8 @@
   display: block;
 }
 
-.dashboard {
-  height: 270px;
-  overflow-y: auto; 
+.contents{
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 10px;
-  border-radius: 50px;
-  width: 450px;
-  padding-bottom: 10px;
-  backdrop-filter: blur(5px);
-  border: 2px solid rgb(79, 22, 82);
-  margin: 20px auto;
-}
-.dashboard::-webkit-scrollbar {
-  display: none;
-}
-
-.inside-boxes{
-  border-radius: 20px;
-  width: 90%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:10px;
-  flex-direction: row;
-  border: 1px solid gold;
-}
-.member-name{
-  color: rgb(241, 183, 35);
-}
-.member-points{
-  color:aqua
-}
-.rank{
-  color:white;
-  font-size: 40px;
+  justify-content: space-between;
 }

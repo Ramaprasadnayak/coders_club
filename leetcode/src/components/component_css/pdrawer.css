@@ -1,0 +1,52 @@
+/* drawer button */
+.pdrawer {
+    width: 500px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #111720;
+    position: fixed;
+    box-shadow: 
+        1px 1px 1px rgb(0, 0, 0),
+        1px 1px 1px rgb(119, 108, 108);
+    left: -520px;
+    top: 0;
+    transition: left 0.3s ease;
+    z-index: 2;
+}
+.pdrawer.open {
+    left: 0;
+}
+
+.pdrawer-btn {
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pdrawer-btn:hover{
+    color: aqua;
+}
+
+.poptions{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap:3px;
+    cursor: pointer;
+    color: white;
+}
+
+.psets{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+
+@media (max-width:768px) {
+    .pdrawer{
+        width: 350px;
+    }
+}

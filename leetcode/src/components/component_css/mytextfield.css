@@ -12,7 +12,9 @@
 /* inside input box (child) */
 .input >input {
     height: 50px;
-    width: 400px;
+    flex: 1;
+    width: auto;
+    font-size: 19px;
     background: transparent;
     border: none;
     outline: none;
@@ -29,5 +31,6 @@
 .eye {
     cursor: pointer;
     margin: 0;
-    margin-right: 15px;
+    margin-right: 4px;
+    font-size: 22px;
 }

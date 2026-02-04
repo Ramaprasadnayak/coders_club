@@ -1,15 +1,11 @@
 .navbar {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    background: #081423;
-    flex-wrap: nowrap;
-    height: 10vh;
-    width: 100%;
-    gap:50%;
-    top: 0;
+    background-color: var(--navbar-color);
+    height: var(--navbar-height);
+    justify-content: space-between;
+    padding: 0 24px;
 }
-
 
 /* header button */
 .header-btn {
@@ -22,8 +18,9 @@
 .btns {
     border: none;
     background: transparent;
+    font-family: 'Press Start 2P', monospace !important;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: 0.3s ease;
 }
 
@@ -35,6 +32,7 @@
 .login-btn {
     color: #0dcaf0;
     background-color: transparent;
+    font-family: 'Press Start 2P', monospace !important;
     border: 1px solid #0dcaf0;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -49,37 +47,27 @@
 }
 
 
-
-
-/* drawer button */
-.drawer {
-    width: 300px;
-    height: 100vh;
-    background: #081423;
-    position: fixed;
-    box-shadow: 
-        1px 1px 1px white,
-        1px 1px 1px rgb(119, 108, 108);
-    left: -320px;
-    top: 0;
-    transition: left 0.3s ease;
-}
-.drawer.open {
-    left: 0;
+.mobile-nav {
+    display: none;
 }
 
-.drawer-btn {
-    font-size: 24px;
-    background: none;
-    color: white;
-    border: none;
+.user-info{
+    color:#FFD700;
+    border:2px solid #FFD700;
+    padding:5px;
+}
+.user-info:hover{
+    box-shadow: 1px 1px 9px #FFD700;
     cursor: pointer;
 }
-.drawer-btn:hover{
-    color: aqua;
-}
 
-.options{
-    cursor: pointer;
-    color: white;
+@media (max-width:768px) {
+    .mobile-nav {
+        display: flex;
+        gap: 20px;
+    }
+    .header-btn {
+        display: none;
+    }
+
 }

@@ -1,4 +1,12 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;  
+    overflow-y: auto;    
+    padding-bottom: var(--navbar-height);
     margin: 0;
+}
+
+:root {
+    --navbar-height: 64px;
+    --navbar-color: #081423;
+    --problemnavbar-height:50px;
 }

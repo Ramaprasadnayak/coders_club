@@ -1,0 +1,22 @@
+.statement,.left,.right{
+    display: flex;
+    gap:25px;
+    flex-direction: row;
+    color:white;
+    cursor: pointer;
+}
+.statement{
+  justify-content:space-between ;
+}
+.statement:hover{
+    transform: scale(1.001);
+}
+.statement:nth-child(even) {
+  background-color: #1F2937;
+}
+.left>p{
+  padding-left: 40px;
+}
+.right>p{
+  padding-right: 40px;
+}
