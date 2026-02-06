@@ -16,7 +16,15 @@ export default function ProblemStatement({ problem,id }) {
                     <div key={index} className="example-box">
                         <p><strong>Input:</strong> {ex.input}</p>
                         <p><strong>Output:</strong> {ex.output}</p>
-                        <p><strong>Explanation:</strong> {ex.explanation}</p>
+                        <p><strong>Explanation:</strong> {ex.explanation}</p> 
+                    </div>
+                ))}
+            </div>
+            <div className="statement-examples">
+                <h3>Constraints :</h3>
+                {problem.constraints?.map((ex, index) => (
+                    <div key={index} className="example-box">
+                        <p><strong>{ex}</strong></p>
                     </div>
                 ))}
             </div>
